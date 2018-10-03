@@ -130,7 +130,7 @@ public class Tbdeposit {
     public void setId(Integer id) {
         this.id = id;
     }
-
+//ez
     public String getProductCode() {
         return productCode;
     }
