@@ -117,6 +117,10 @@ public class Tbdeposit {
     private BigDecimal accumbook;
     private BigDecimal accumavail;
 //    private BigDecimal freezeamount;
+    private String solicitingofficer;
+    private String referralofficer;
+    private String channel;
+
     private String soadispo;
 
     public Integer getId() {
@@ -869,5 +873,29 @@ public class Tbdeposit {
 
     public void setSoadispo(String soadispo) {
         this.soadispo = soadispo;
+    }
+
+    public String getSolicitingofficer() {
+        return solicitingofficer;
+    }
+
+    public void setSolicitingofficer(String solicitingofficer) {
+        this.solicitingofficer = solicitingofficer;
+    }
+
+    public String getReferralofficer() {
+        return referralofficer;
+    }
+
+    public void setReferralofficer(String referralofficer) {
+        this.referralofficer = referralofficer;
+    }
+
+    public String getChannel() {
+        return channel;
+    }
+
+    public void setChannel(String channel) {
+        this.channel = channel;
     }
 }

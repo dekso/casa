@@ -58,6 +58,8 @@ public class Tbprodmatrix {
     private String createdby;
     private Date createddate;
     private Boolean ataind;
+    private BigDecimal maxbalance;
+    private Integer age;
 
 //    @OneToOne(cascade = CascadeType.ALL)
 //    @JoinColumns({
@@ -414,5 +416,21 @@ public class Tbprodmatrix {
 
     public void setAtaind(Boolean ataind) {
         this.ataind = ataind;
+    }
+
+    public BigDecimal getMaxbalance() {
+        return maxbalance;
+    }
+
+    public void setMaxbalance(BigDecimal maxbalance) {
+        this.maxbalance = maxbalance;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

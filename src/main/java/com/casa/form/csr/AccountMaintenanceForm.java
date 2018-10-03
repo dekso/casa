@@ -15,6 +15,10 @@ public class AccountMaintenanceForm {
 	private Integer alertlevel;
 	private String alertmessage;
 	private String watchlist;
+	private String prodtype;
+	private String solofficer;
+	private String refofficer;
+	private String channel;
 
 	public String getAccountno() {
 		return accountno;
@@ -89,5 +93,37 @@ public class AccountMaintenanceForm {
 
 	public void setWatchlist(String watchlist) {
 		this.watchlist = watchlist;
+	}
+
+	public String getProdtype() {
+		return prodtype;
+	}
+
+	public void setProdtype(String prodtype) {
+		this.prodtype = prodtype;
+	}
+
+	public String getSolofficer() {
+		return solofficer;
+	}
+
+	public void setSolofficer(String solofficer) {
+		this.solofficer = solofficer;
+	}
+
+	public String getRefofficer() {
+		return refofficer;
+	}
+
+	public void setRefofficer(String refofficer) {
+		this.refofficer = refofficer;
+	}
+
+	public String getChannel() {
+		return channel;
+	}
+
+	public void setChannel(String channel) {
+		this.channel = channel;
 	}
 }

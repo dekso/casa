@@ -178,10 +178,12 @@ public class CASACustomerRelRepository {
 
     public AccountMaintenanceForm getAccountMaintenanceDetail(String accountno) {
         try {
-            return jt.queryForObject("SELECT tb.AccountNo as accountno, tb.AccountName AS name, tb.AccountStatus as acctsts, " +
-                    "tb.BookDate as dtopened, cd.desc1 as jointaccttype, SUBSTRING(AccountName,1,10) AS shortname, " +
-                    "tb.Posttx as posttx, tb.alertflag AS alertflag, tb.alertlevel AS alertlevel, tb.alertmessage AS alertmessage, watchlistcode as watchlist " +
-                    "FROM TBDEPOSIT tb JOIN TBCODETABLE cd ON tb.OwnershipType=cd.codevalue WHERE AccountNo=? AND cd.codename='OWNERSHIPTYPE'",
+            return jt.queryForObject("SELECT tb.AccountNo as accountno, tb.AccountName AS name, tb.AccountStatus as acctsts, tb.BookDate as dtopened, cd.desc1 as jointaccttype, " +
+                            " SUBSTRING(AccountName,1,10) AS shortname, tb.Posttx as posttx, tb.alertflag AS alertflag, tb.alertlevel AS alertlevel, " +
+                            " tb.alertmessage AS alertmessage, watchlistcode as watchlist ,tb.solicitingofficer AS solofficer, tb.referralofficer AS refofficer, " +
+                            " tb.channel AS channel,  prod.prodname AS prodtype FROM TBDEPOSIT tb  JOIN TBPRODMATRIX prod ON tb.productCode = prod.prodgroup AND " +
+                            "  tb.subProductCode = prod.prodcode JOIN TBCODETABLE cd ON tb.OwnershipType=cd.codevalue WHERE " +
+                            "  AccountNo=? AND cd.codename='OWNERSHIPTYPE'",
                     new Object[]{accountno}, new BeanPropertyRowMapper<>(AccountMaintenanceForm.class));
         } catch (Exception e) {
             logger.error("CustomerRelRepo -> Account Maintenance Detail : ", e.getMessage(), e);
