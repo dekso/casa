@@ -119,7 +119,7 @@ public class Tbdeposit {
 //    private BigDecimal freezeamount;
     private String solicitingofficer;
     private String referralofficer;
-    private String channel;
+    private String campaign;
 
     private String soadispo;
 
@@ -891,11 +891,11 @@ public class Tbdeposit {
         this.referralofficer = referralofficer;
     }
 
-    public String getChannel() {
-        return channel;
+    public String getcampaign() {
+        return campaign;
     }
 
-    public void setChannel(String channel) {
-        this.channel = channel;
+    public void setcampaign(String campaign) {
+        this.campaign = campaign;
     }
 }
