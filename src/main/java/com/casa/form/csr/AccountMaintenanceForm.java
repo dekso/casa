@@ -19,6 +19,7 @@ public class AccountMaintenanceForm {
 	private String solofficer;
 	private String refofficer;
 	private String channel;
+	private boolean ataind;
 
 	public String getAccountno() {
 		return accountno;
@@ -125,5 +126,13 @@ public class AccountMaintenanceForm {
 
 	public void setChannel(String channel) {
 		this.channel = channel;
+	}
+
+	public boolean isAtaind() {
+		return ataind;
+	}
+
+	public void setAtaind(boolean ataind) {
+		this.ataind = ataind;
 	}
 }
